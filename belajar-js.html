@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+
+    <style type="text/css">
+        .login {
+            margin: 250px auto;
+            width: 500px;
+            height: 190px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: lightblue;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+        }
+        input[type=text], input[type=password] {
+            margin: 5px auto;
+            width: 90%;
+            padding: 10px;
+        }
+        input[type=submit] {
+        margin: 5px auto;
+        float: right;
+        padding: 5px;
+        width: 90px;
+        border: 1px solid #fff;
+        color: #fff;
+        background: red;
+        cursor: pointer;
+        margin-right: 13px;
+    }
+    </style>
+
+</head>
+<body>
+
+    <div class="login">
+        <p id="pesan" style="color: red;">Login</p>
+        <form action="#">
+            <input id="user" type="text" placeholder="Masukan email Anda"><br>
+            <input id="pass" type="password" placeholder="Masukan Passord"><br>
+            <!-- <input type="checkbox">Ingat Saya -->
+            <input onclick="save();" type="submit" name="kirim" value="Kirim">
+        </form>
+    
+    <!-- <div class="login">
+        <p id="pesan" style="color: red;"></p>
+        <form action="#">
+            <input type="text" id="user" placeholder="Username">
+            <br>
+            <input type="password" id="pass" placeholder="Password">
+            <br>
+            <input type="submit" onclick="save();">
+        </form>
+    </div> -->
+    
+
+    <script>
+        function save(){
+
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+
+            if (user === "") {
+                document.getElementById("pesan").innerHTML = "Masukkan Username";
+            }
+            
+            else if (user != "Admin") {
+                document.getElementById("pesan").innerHTML = "Username tidak terdaftar";
+            }
+            
+            else if (pass === "") {
+                document.getElementById("pesan").innerHTML = "Masukkan Password";
+            }
+
+            else if (pass != "1234") {
+                document.getElementById("pesan").innerHTML = "Password Salah";
+            }
+
+            else if (user === "Admin" && pass === "1234") {
+                alert("Login Sukses");
+            }else{
+                alert("Login Gagal");
+            }
+        }
+    </script>
+</body>
+</html>
