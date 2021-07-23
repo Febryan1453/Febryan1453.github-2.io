@@ -89,6 +89,8 @@
 
 <body>
 
+  <!-- <audio src="http://www.jplayer.org/audio/mp3/Miaow-snip-Stirring-of-a-fool.mp3" autoplay="autoplay" hidden="hidden"></audio> -->
+
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -450,11 +452,25 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <a href="assets/pdf/082191170349-FEBRYAN.pdf">
+                     
+                      <!-- <a href="assets/pdf/082191170349-FEBRYAN.pdf">
                         <button type="button" class="btn btn-primary modaal">
                           Download Resume
                         </button>
-                      </a>
+                      </a> -->
+
+                      <!-- Button Group -->
+                      <div class="btn-group" role="group">
+                        <button id="download" type="button" class="btn btn-primary modaal dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          Download
+                        </button>
+                        <ul style="background-color: #e1e2e3;" class="dropdown-menu" aria-labelledby="download">
+                          <li><a target="_blank" class="dropdown-item" href="assets/pdf/082191170349-FEBRYAN.pdf">PDF</a></li>
+                          <li><a target="_blank" class="dropdown-item" href="assets/img/febryan.png">PNG</a></li>
+                        </ul>
+                      </div>
+                      <!-- End Button Group -->
+
                     </div>
                   </div>
                 </div>
